@@ -64,7 +64,7 @@ def save_programs_info_to_file(programs_info, filepath):
 
 
 # ----------------------------
-# Для клиента 4
+# Для клиента 2/4
 class Node:
     def __init__(self, value):
         self.value = value
@@ -136,8 +136,8 @@ class Server:
             print("varya")
             result = await self.varya(reader)
 
-        elif input_data == "4":
-            print("delya")
+        elif input_data == "2":
+            print("alice")
             result = await self.delya(reader)
 
         if result:
@@ -159,8 +159,9 @@ class Server:
                 save_programs_info_to_file(programs_info, "programs_info.json")
         json_file = json.dumps(programs_info).encode('utf-8')
         return json_file
-
-    async def delya(self, reader):
+    
+    #2
+    async def alice(self, reader):
         folder_name = create_directory()
         file_counter = 0
         Tree = BinaryTree()

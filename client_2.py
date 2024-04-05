@@ -21,7 +21,7 @@ def main():
     server_socket.connect((host, port))
     print("Подключено к серверу")
 
-    server_socket.send('4'.encode('utf-8'))
+    server_socket.send('2'.encode('utf-8'))
 
     while True:
         user_input = input("Введите число (или 'GET_FILE' для запроса файла): ")
